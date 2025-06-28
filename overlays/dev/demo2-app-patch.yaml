@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo2-app
+  namespace: demo-apps
+spec:
+  template:
+    spec:
+      containers:
+      - name: demo2-app
+        imagePullPolicy: Never 

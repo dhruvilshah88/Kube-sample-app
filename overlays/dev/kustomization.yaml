@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+patches:
+- path: demo-app-patch.yaml
+  target:
+    kind: Deployment
+    name: demo-app
+- path: demo2-app-patch.yaml
+  target:
+    kind: Deployment
+    name: demo2-app 
